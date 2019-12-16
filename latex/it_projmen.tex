@@ -45,14 +45,14 @@
 
 \title{Agilis módszertan bevezetése}
 \author{Horváth András \\ Széchenyi István Egyetem, Győr}
-\date{2019. november 13}
+\date{2019. november 13.}
 \maketitle
 
 \begin{abstract}
 
 Ez a dolgozat az IT projekmenedzsment tárgy teljesítéséhez készült. A dolgozatban összehasonlítom a kalsszikus és az agilis szoftver\-fejlesztési folya\-matot. Bemutatom ezek szereplőit, metódusait, alkalmazási területeit.
 
-Ezután áttekintem a projektmenedzsment szereplőit és folyamatát. Célom bemutatni, hogy egy szoftverfejlsztéssel foglalkozó hogyan kerülhet bevezetésre az agilis módszertan. Legvégül kitérek arra kérdésre, hogy lehet-e átfedés vagy valamilyen kapcsolat a projekt-menedzseri feladatok és az agilis szoftver\-fejlesztés szerepkörei között.
+Ezután áttekintem a projektmenedzsment szereplőit és folyamatát. Célom bemutatni, hogy egy szoftverfejlsztéssel foglalkozó vállalatnál hogyan kerülhet bevezetésre az agilis módszertan. Legvégül kitérek arra kérdésre, hogy lehet-e átfedés vagy valamilyen kapcsolat a projekt-menedzseri feladatok és az agilis szoftver\-fejlesztés szerepkörei között.
 \end{abstract}
 
 \section{Szoftver\-fejlesztési módszerek}
@@ -65,7 +65,7 @@ A dolgozat elején kettő, alapvetően különböző szoftver\-fejlesztési mód
 
 Klasszikus szoftver\-fejlesztés alatt legtöbben a vízesés modellt értik. Ez a módszer régen nagyon elterjedt volt manapság viszont szinte elképzelhetetlen a használata összetett szoftver fejlesztése esetén. Ennek oka a módszer egyenes munkafolyamata és szigorúsága. A módszer fázisait az \figref{waterfall} ábra~\cite{waterfall_image} mutatja. Ezek az alábbiak:
 \begin{description}
-	\item[Szükségletek felmérése:] Ebben a fázisban a cél pontosan megérteni és dokumentálni mire van szöksége a vásárlónak.
+	\item[Szükségletek felmérése:] Ebben a fázisban a cél pontosan megérteni és dokumentálni mire van szüksége a vásárlónak.
 	\item[Rendszer megtervezése:] A tervezés fázisában az előző fázisban elkészített dokumentumok alapján elő kell állítani a rendszer struktúráját.
 	\item[Rendszer megvalósítása:] Ebben a fázisban történik a kódolás, a tervezett struktúra implementálása
 	\item[Tesztelés:] Ebben a fázisban ellenőrizzük hogy amit implementáltunk az megegyezik a tervezettel, illetve hogy a vevő igényeit kielégíti-e.
@@ -81,9 +81,9 @@ A \cite{waterfall} forrás mindezen fázisok előtt megemlíti a megvalósíthat
 	\label{fig:waterfall}
 \end{figure}
 
-Ez a folyamat nagyon hasonlít az előadáson bemutatott álatalános projekt folyamattal. Abban szintúgy megtalálható a tervezés, megvalósítás és felügyelés lépései. A lényeges különbség az ott bemutatott folyamat és az itt leírt szofteverfejlesztési folyamat között, hogy ebben nincs lehetőség a fejlesztés megszakítására. Ez az üzleti életben nagy hátrány ebből adódik, hogy ezt a modellt nem alkalmazzák.
+Ez a folyamat nagyon hasonlít az előadáson bemutatott álatalános projekt folyamattal. Abban szintúgy megtalálható a tervezés, megvalósítás és felügyelés lépései. A lényeges különbség az ott bemutatott folyamat és az itt leírt szofteverfejlesztési folyamat között, hogy ebben nincs lehetőség a fejlesztés megszakítására. Ez az üzleti életben nagy hátrányt jelent. Ebből adódik, hogy ezt a modellt manapság nem alkalmazzák nagy feladatokra. Ennek ellenére kisebb eszközök lefejlesztésére jó megközelítés.
 
-Ennek a modellnek egy használható változata, ha egy iteratív ciklussá alakítjuk. Az elkészített terméket a megrendelő használja, majd új követelményekkel megfogalmazza további szükségleteit. Ezután újra  a tervezés és  a megvalósítás következik. Ez lehetőséget ad a hibák kijavítására.
+Ennek a modellnek egy használható változatát kapjuk, ha egy iteratív ciklussá alakítjuk. Az elkészített terméket a megrendelő kipróbálja, használja. Az így szerzett tapasztalatok alapján új követelményeket fogalmaz meg és közli további szükségleteit. Ezután a ciklusban újra  a tervezés és a megvalósítás következik. Ez lehetőséget ad a hibák korai kijavítására. A korai módosítás, javítás lehetősége nagyon fontos egy öszetett alaklmazás fejlesztése során, mivel minél később történik annál nagyobb a költsége. \cite{fix_cost}
 
 
 \subsection{Agilis szoftver\-fejlesztés}
@@ -97,23 +97,35 @@ A Scrum módszer lényege az iterációban és az inkrementális fejlesztésben 
 	\item kódolás
 	\item tesztelés és elfogadás
 \end{itemize}
-történik meg. Itt azonban mindez a változásra nyitottan történik meg. A fejlesztő csapat maga határozza meg, hogy a következő szoftver-szállítmányba adott idő alatt mit tud megvalósítani. A megrendelő a követelményet ízlése szerint priorizálhatja és a csapat az alapján fog sorban menni  a tervezés során. A szállítmányt a megrendelő kipróbálja és a következő tervezésre már vissza is tud jelezni és új követelményeket megfogalmazni.
+történik meg. Itt azonban mindez a változásra nyitottan történik meg. A fejlesztő csapat maga határozza meg, hogy a következő szoftver-szállítmányba adott idő alatt (ez a Sprint)  mit tud megvalósítani. A megrendelő a követelményet ízlése szerint priorizálhatja és a csapat az alapján fog sorban menni  a tervezés során. A szállítmányt a megrendelő kipróbálja és a következő tervezésre már vissza is tud jelezni és új követelményeket megfogalmazni.
 
 A Scrum módszer definiálja, hogy egy fejlesztési projekt során milyen szereplők vesznek részt és milyen feladatokat látnak el:
 
 \begin{itemize}
-	\item Termék tulajdonos
-	\item Scrum mester
-	\item Scrum csoport
+	\item Termék tulajdonos \emph{(Product Owner)}
+	\item Scrum mester \emph{(Scum master)}
+	\item Scrum csoport \emph{(Scrum team)}
 \end{itemize}
 
-A Scrum master feladata a Scrum csoport és a termék tulajdonos támogatása, a helyes Scrum gyakorlatok elsajátításának támogatása. Ő nem a csapat vezetője vagy képviselője sem a projekt managere. \cite{scrum_roles}
+Ezen szereplők feladatai az alábbiak:
+
+A \textbf{termék tulajdonos} a megrendelők képviselője esetleg maga a megrendelő. Az ő felelőssége a befektetés megtérülésének maximalizálása. Ehhez a legfőbb eszköze, hogy a termék funkcionalitásait prioritizálja és ezáltal a csapattal ezeket készítteti el. Ha a csapat saját ötlettel áll elő, azt elfogadhatja vagy elutasíthatja. \cite{scrum_roles}
+
+A \textbf{Scrum master} feladata a Scrum csoport és a termék tulajdonos támogatása, a helyes Scrum gyakorlatok elsajátításának támogatása. Ő nem a csapat vezetője vagy képviselője sem a projekt managere. Ö egy befolyásos vezető, de nem közvetlen utasíásokkal vagy parancsokkal irányít. \cite{scrum_roles}
+
+A \textbf{Scrum csapat} a szoftver fejlesztését végző személyekből áll. Összetételét tekintve több terület képviselőiből tevődik össze. A csapatnak önszerveződőnek és számonkérhetőnek kell lennie. A Sprint tervezésekor ők döntik el, hogy a szoftver-kiadásig hány funkciót tudnak megcsinálni és hogyan lehet ezt a legcélszerűbben elérni.\cite{scrum_roles}
  
 \section{A szoftver\-fejlesztés mint projekt}
 
-Az előzőekben bemutatott metodológiák után most tekintsünk a szoftverfejlesztésre, mint projektre. Minden projektre jellemző, hogy időben és célkitűzésében elhatárolható. Ez a kitétel egy szoftver fejlesztésére igaz lehet, de nem minden esetben. Pl.: egy operációs rendszer megalkotása rengeteg munka, és a ma leggyakrabban használtak már több évtizede fejlődnek. Egy mobil-játék lefejlesztése tipikusan sokkal hamarabb megvan, és többsége ha egyszer elkészült úgy is marad, befejezettnek van tekintve.
+Az előzőekben bemutatott metodológiák után most tekintsünk a szoftverfejlesztésre, mint projektre.
 
-Jómagam a Knorr-Bremse DAS (Driver Assistance System) osztályán dolgozom. A osztályon vezetés-támogató rendszerek fejlesztése zajlik. Ilyen például az automatikus vészfékező rendszer (AEBS). Egy ilyen rendszer előállítása során nem csupán szoftver fejlesztést történik. A rendszer alapvető része a radar szenzor, amit szintén le kell fejleszteni.
+Minden projektre igaz kell hogy legyen, hogy időben és célkitűzésében, valamit személyi és pénzügyi erőforrásaiban elhatárolható más céloktól \cite{proj_fogalom}. Ez a kitétel egy szoftver fejlesztésére igaz lehet, de nem minden esetben. Pl.: egy operációs rendszer megalkotása rengeteg munka, és a ma leggyakrabban használtak már több évtizede fejlődnek. Operációs rendszer fejlesztésére általában szervezetet alapítanak, aminek ez a fő profilja. 
+
+Egy mobil-játék lefejlesztése tipikusan sokkal hamarabb megvan, és többsége ha egyszer elkészült úgy is marad, befejezettnek van tekintve. Egy mobil-alkalmazást készítő szervezet életében több alkalmazás akár egyszerre párhuzamosan is készülhet. Ilyenkor egy alkalmazás elkészítése lehet egy önálló projekt. Ennek van önálló megrendelője aki a kiadásokat állja és a szervezet alkalmazottai közül saját csapatot alakítanak a fejlesztésre. A csapat tagjai akár több projekten is dolgozhatnak egyszerre.
+
+Jómagam a Knorr-Bremse DAS (Driver Assistance System) osztályán dolgozom. A osztályon vezetés-támogató rendszerek fejlesztése zajlik. Ilyen például az automatikus vészfékező rendszer (AEBS). Egy ilyen rendszer előállítása során nem csupán szoftver fejlesztést történik. A rendszer alapvető része a radar szenzor ami a detektálást végzi és amin a szoftver fut. Ennek a lefejlesztése szintén a nagyobb projekt szkópja. Azonban a szoftver-fejlesztésre tekinthetünk egy önálló projektként.
+
+Ennek a projektnek a célja, hogy az adott hardverre egy valamilyen feladatot megoldani képes szoftvert szállítson. Ebben a szeparációban a szoftverfejlesztés projekt megrendelője és vevője a rendszert leszállító projekt. Abban a projektben döntik el, hogy a szoftvernek hogy kell működnie, és mikorra kell elkészülnie. A 
 
 \bibliography{biblio}{}
 \bibliographystyle{plain}
