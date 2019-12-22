@@ -24,6 +24,10 @@
 % ensures that the paper size is a4, the fonts are typeset at the size 12p
 % and the equation numbers are on the left side
 %
+ 
+\setlength{\parindent}{2.2em}
+\setlength{\parskip}{1.1em}
+\renewcommand{\baselinestretch}{1.1}
 \usepackage{amsmath}%
 \usepackage{amsfonts}%
 \usepackage{amssymb}%
@@ -111,9 +115,11 @@ Ezen szereplők feladatai az alábbiak:
 
 A \textbf{termék tulajdonos} a megrendelők képviselője esetleg maga a megrendelő. Az ő felelőssége a befektetés megtérülésének maximalizálása. Ehhez a legfőbb eszköze, hogy a termék funkcionalitásait prioritizálja és ezáltal a csapattal ezeket készítteti el. Ha a csapat saját ötlettel áll elő, azt elfogadhatja vagy elutasíthatja. \cite{scrum_roles}
 
-A \textbf{Scrum master} feladata a Scrum csoport és a termék tulajdonos támogatása, a helyes Scrum gyakorlatok elsajátításának támogatása. Ő nem a csapat vezetője vagy képviselője sem a projekt managere. Ö egy befolyásos vezető, de nem közvetlen utasíásokkal vagy parancsokkal irányít. \cite{scrum_roles}
+A \textbf{Scrum master} feladata a Scrum csoport és a termék tulajdonos támogatása, a helyes Scrum gyakorlatok elsajátításának támogatása. Ő nem a csapat vezetője vagy képviselője sem a projekt menedzsere. Ő egy befolyásos vezető, de nem közvetlen utasíásokkal vagy parancsokkal irányít. \cite{scrum_roles}
 
 A \textbf{Scrum csapat} a szoftver fejlesztését végző személyekből áll. Összetételét tekintve több terület képviselőiből tevődik össze. A csapatnak önszerveződőnek és számonkérhetőnek kell lennie. A Sprint tervezésekor ők döntik el, hogy a szoftver-kiadásig hány funkciót tudnak megcsinálni és hogyan lehet ezt a legcélszerűbben elérni.\cite{scrum_roles}
+
+Összességében az agilis módszertan előnye a rugalmasságában, a változásokra gyorsan reagáló képességében gyökerezik. Ezt a szemléletmódot minden szereplőnek el kell sajátítania a módszer sikeres alkalmazásához.
  
 \section{A szoftver\-fejlesztés mint projekt}
 
@@ -126,6 +132,28 @@ Egy mobil-játék lefejlesztése tipikusan sokkal hamarabb megvan, és többség
 Jómagam a Knorr-Bremse DAS (Driver Assistance System) osztályán dolgozom. A osztályon vezetés-támogató rendszerek fejlesztése zajlik. Ilyen például az automatikus vészfékező rendszer (AEBS). Egy ilyen rendszer előállítása során nem csupán szoftver fejlesztést történik. A rendszer alapvető része a radar szenzor ami a detektálást végzi és amin általában a szoftver fut. Ennek a lefejlesztése szintén egy nagyobb projekt feladata. Ezen felül meg kell oldanai a hardver sorozat-gyártását és szállítását a járműgyártóknak.
 
 Azonban a szoftver-fejlesztésre tekinthetünk egy önálló projektként egy nagyobb projekten belül. Ennek a projektnek a célja, hogy az adott hardverre egy adott feladatot megoldani képes szoftvert szállítson. Ebben a szeparációban a szoftverfejlesztés projekt megrendelője és így a vevője a rendszert előállító projekt. Abban a projektben döntik el, hogy a szoftvernek hogyan kell működnie, milyen platformon fut, és mikorra kell elkészülnie. 
+
+\subsection{Egy agilis projekt szereplői}
+\label{sec:AProjektSzereploi}
+
+Azonosítsuk be, hogy az előbb felvázolt projektben a Scrum szerepkörök és a projektmenedzseri feladatok között milyen átfedés van. Az előadáson elhangzottak szerint haladva:
+
+A projektmenedzser a projektet előkészíti és megtervezi. Maga mellé támogatókat keres, összeállítja a csapatot akik a megvalósításban részt fognak venni. A projekt során a megrendelő és a csapat közötti kapcsolattartást, egyetértést biztosítja. A Scrum metodológiában egyetlen lehetséges szerepe a \emph{product owner}, hiszen a \emph{PO} feladata a megerendelő képviselése a fejlesztő csapat felé. Ez azonban egyáltalán nem szükséges, erre szerepre választhat egy különálló személyt a \emph{projekt team}-en belül. A Scrum módszer szerint viszont fontos, hogy a projektmenedzser nem lehet \emph{Scrum master}.
+
+A \emph{projekt team} a projekt megvalósításán dolgozó személyek csoportja. A Scrum módszerben bemutatott fejlesztő csapat egyértelműen ide esik. Ezen túl ide sorolható még a \emph{Scrum master} és akár a \emph{product owner} is, amennyiben erre a feladatra a menedzser egy külön személyt választ ki.
+
+A projekt szponzor feladata, hogy a projektmenedzsert támogassa úgy szakmailag mint személyes ügyekben egyaránt. Egy jó szponzor ismeri a szervezet befolyásos személyeit és hogy "hogy mennek a dolgok". Ennél fogva el tud intézni olyan dolgokat amikre a projektmenedzsernek nincs lehetősége. \cite{proj_szponzor} Ennek a személynek jól állhat a \emph{Scrum master} szerepe. Ilyen például ha csapat jelzi felé, hogy gyorsan szükség van egy szerverre, akkor tudja, hogy az IT osztályon kinek kell szólni. Így amíg a projektmenedzser végigjárja a hivatalos folyamatot, a csapat addig is tud mit használni.
+
+A megrendelőnek, a project \emph{steakholder}-ének a Scrumban a \emph{product owner} szerepkör jut, amennyiben személyesen tudja az érdekeit képviselni. Ha erre nincs ideje, akkor valakit felkér képviselőnek. 
+
+\section{Az agilis módszer bevezetése}
+\label{sec:AzAgilisModszerBevezetese}
+
+Az eddig bemutatottak alapján felvázolom, hogy szerintem hogyan lehet egy nagyvállalati környezetben bevezetni az agilis módszertan szerinti szoftverfejlesztést.
+
+Ha a klasszikus szemléletről egy agilis módszerre való átállásra egy projektként tekintünk, akkor erre igaznak kell lennie, hogy elhatárolódik más vállalati céloktól, tudjuk azonosítani a vevőt és erre a feladatra fel kell állítani egy projekt csapatot. 
+
+Önmagában ezt a módszert nem lehet bevezetni, mivel ez egy "szabályrendszer", egy eszköz, amivel a szoftverfejlesztés hosszadalmas tervezését és dokumentálását lehet felgyorsítani. Tehát egy már folyamatban lévő szoftverfejlesztési projekt esetén van lehetőség átállásra. Természetesen egy újonnan kezdődő projekt esetén lehet egyből ezzel kezdeni. Arról, hogy a szoftver fejlesztése milyen módszerrel történik a projekt menedzsmentje hozza meg a döntést.
 
 \bibliography{biblio}{}
 \bibliographystyle{plain}
